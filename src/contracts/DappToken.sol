@@ -1,10 +1,12 @@
-pragma solidity ^0.5.0;
+pragma solidity >=0.5.0;
 
 contract DappToken {
     string  public name = "DApp Token";
     string  public symbol = "DAPP";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;
+
+    // 1.000000000000000000 =  1 DAPP    => 1000000 DAPP = 1000000000000000000000000 1 million tokens // solidity does not treat the decimal // 
 
     event Transfer(
         address indexed _from,
